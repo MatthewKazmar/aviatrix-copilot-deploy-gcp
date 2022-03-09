@@ -8,7 +8,7 @@ locals {
   region         = var.region == "" ? data.google_client_config.cc.region : var.region
   zone           = var.zone == "" ? data.google_client_config.cc.zone : var.zone
   public_ip_name = var.public_ip_name == "" ? "${var.vm_name}-public-ip" : var.public_ip_name
-  public_ip      = var.use_existing_public_ip ? data.google_compute_address.avx_copilot_publicip.address : google_compute_address.avx_copilot_publicip.address
+  public_ip      = var.use_existing_public_ip ? data.google_compute_address.avx_copilot_publicip[0].address : google_compute_address.avx_copilot_publicip[0].address
   data_disk_name = var.data_disk_name == "" ? "${var.vm_name}-data-disk-1" : var.data_disk_name
 }
 
