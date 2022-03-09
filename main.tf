@@ -54,7 +54,7 @@ resource "google_compute_instance" "avx_copilot_vm" {
   }
 
   network_interface {
-    subnetwork = data.google_compute_subnetwork.extranet-avx-controller.self_link
+    subnetwork = data.google_compute_subnetwork.avx_copilot_subnet.self_link
     access_config {
       nat_ip = local.public_ip
     }
