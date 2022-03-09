@@ -34,6 +34,12 @@ variable subnet_name {
 }
 
 variable data_disk_size {
+  description = "The name of the data disk. Leave as default to autogenerate a name."
+  type = string
+  default = ""
+}
+
+variable data_disk_size {
   description = "The size of the data disk in GB to deploy for storage."
   type = number
   default = 2000

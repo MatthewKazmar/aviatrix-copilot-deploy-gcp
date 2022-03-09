@@ -14,8 +14,8 @@ v1.0.0 | 0.12 - 1.0 | >=6.5 | >=0.2.20
 ### Usage Example
 
 ```
-module "aviatrix-copilot-deploy-gcp" {
-  source        = "terraform-aviatrix-modules/copilot/aviatrix"
+module "copilot" {
+  source        = "terraform-aviatrix-modules/aviatrix-copilot-deploy-gcp/aviatrix"
   version       = "1.0.0"
 
   subnet_name   = "aviatrix-copilot"
@@ -23,8 +23,8 @@ module "aviatrix-copilot-deploy-gcp" {
 ```
 
 ```
-module "aviatrix-copilot-deploy-gcp" {
-  source          = "terraform-aviatrix-modules/copilot/aviatrix"
+module "copilot" {
+  source          = "terraform-aviatrix-modules/aviatrix-copilot-deploy-gcp/aviatrix"
   version         = "1.0.0"
 
   subnet_name     = "aviatrix-copilot"
@@ -50,6 +50,7 @@ region | Provider default | Region to deploy into.
 zone | Provider default | Zone to deploy into.
 use_existing_public_ip | false | Use an existing public IP.
 public_ip_name | <vm_name>-public-ip | The name of the Public IP to use or deploy.
+data_disk_size | <vm_name>-data-disk-1 | The name of the Data Disk
 data_disk_size | 2000 (2tb) | The size of the data disk in GB to deploy for storage.
 tags | null | Network tags to apply to the VM.
 vm_name | aviatrix-copilot |The Copilot VM's name.
