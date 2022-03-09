@@ -14,7 +14,7 @@ locals {
 
 resource "google_compute_address" "avx_copilot_publicip" {
   count        = var.use_existing_public_ip ? 0 : 1
-  name         = var.public_ip_name
+  name         = local.public_ip_name
   address_type = "EXTERNAL"
   project      = local.project
   region       = local.region
