@@ -6,6 +6,12 @@ https://docs.aviatrix.com/HowTos/copilot_getting_started.html#instance-system-re
 
 Defaults include a 2TB data disk and an n2-standard-2 (2 CPU/8gb RAM) VM instance.
 
+{% note %}
+
+**Note:** GCP default SSD quota appears to be 500gb. You may need to request an increase.
+
+{% endnote %}
+
 ### Compatibility
 Module version | Terraform version | Controller version | Terraform provider version
 :--- | :--- | :--- | :---
