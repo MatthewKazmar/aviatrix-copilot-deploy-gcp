@@ -13,13 +13,16 @@ v1.0.0 | 0.12 - 1.0 | >=6.5 | >=0.2.20
 
 ### Usage Example
 
+```
 module "aviatrix-copilot-deploy-gcp" {
   source        = "terraform-aviatrix-modules/copilot/aviatrix"
   version       = "1.0.0"
 
   subnet_name   = "aviatrix-copilot"
 }
+```
 
+```
 module "aviatrix-copilot-deploy-gcp" {
   source          = "terraform-aviatrix-modules/copilot/aviatrix"
   version         = "1.0.0"
@@ -29,6 +32,7 @@ module "aviatrix-copilot-deploy-gcp" {
   data_disk_size  = 4000 #4tb data disk
   vm_size         = "n2-standard-8" #8 cpu/32gb
 }
+```
 
 ### Variables
 The following variables are required:
